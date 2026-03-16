@@ -1,39 +1,40 @@
 aid: j-quants
 name: J-Quants
 description: >-
-  The current environment doesnt allow easy access for retail investors, who
-  want to analyze their investments using data, to obtain and use raw financial
-  data.J-Quants API is an API data distribution service for retails that makes
-  it easy to obtain cleansed financial data such as stock prices and financials
-  in historical format.Lets analyze stocks by utilizing well-formatted financial
-  data. 
+  J-Quants is a financial data API service operated by Japan Exchange Group
+  (JPX) that makes it easy for retail investors to obtain cleansed financial
+  data such as stock prices and financials in historical format. The service
+  democratizes access to raw financial data for investment analysis.
 type: Index
-position: Consumer
-access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - API
+  - Financial Data
+  - Stock Market
+  - Japan
+  - Investment
 created: '2025-02-12'
-modified: '2025-02-12'
+modified: '2026-03-16'
 url: >-
   https://raw.githubusercontent.com/api-evangelist/j-quants/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: j-quants:j-quants
-    name: J-Quants
+  - aid: j-quants:j-quants-api
+    name: J-Quants API
     description: >-
-      The current environment doesnt allow easy access for retail investors, who
-      want to analyze their investments using data, to obtain and use raw
-      financial data.J-Quants API is an API data distribution service for
-      retails that makes it easy to obtain cleansed financial data such as stock
-      prices and financials in historical format.Lets analyze stocks by
-      utilizing well-formatted financial data. 
-    humanURL: ' https://jpx-jquants.com/'
+      The J-Quants API is a data distribution service that makes it easy to
+      obtain cleansed financial data such as Japanese stock prices and
+      financials in historical format, enabling investment analysis.
+    humanURL: https://jpx-jquants.com/
     tags:
-      - API
+      - Financial Data
+      - Stock Market
+      - Japan
     properties:
       - type: Documentation
-        url: ' https://jpx-jquants.com/'
+        url: https://jpx-jquants.com/
+common:
+  - type: Website
+    url: https://jpx-jquants.com/
 maintainers:
   - FN: Kin Lane
-    email: info@apievangelist.com
+    email: kin@apievangelist.com
