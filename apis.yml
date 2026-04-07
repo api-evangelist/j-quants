@@ -9,9 +9,9 @@ type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Financial Data
-  - Stock Market
-  - Japan
   - Investment
+  - Japan
+  - Stock Market
 created: '2025-02-12'
 modified: '2026-03-16'
 url: >-
@@ -27,8 +27,8 @@ apis:
     humanURL: https://jpx-jquants.com/
     tags:
       - Financial Data
-      - Stock Market
       - Japan
+      - Stock Market
     properties:
       - type: Documentation
         url: https://jpx-jquants.com/
