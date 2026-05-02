@@ -16,19 +16,20 @@ J-Quants is a financial data API service operated by Japan Exchange Group (JPX) 
 ## Timestamps
 
 - **Created:** 2025-02-12 
-- **Modified:** 2026-03-16 
+- **Modified:** 2026-04-28 
 
 ## APIs
 
 ### J-Quants API
-The J-Quants API is a data distribution service that makes it easy to obtain cleansed financial data such as Japanese stock prices and financials in historical format, enabling investment analysis.
+The J-Quants API (V2) is a data distribution service operated by Japan Exchange Group (JPX) that makes it easy to obtain cleansed financial data such as Japanese stock prices and financials in historical format, enabling investment analysis. Authentication is via API key passed in the x-api-key header.
 
 **Human URL:** [https://jpx-jquants.com/](https://jpx-jquants.com/)
 
+**Base URL:** `https://api.jquants.com/`
 
 #### Tags:
 
- - Financial Data, Stock Market, Japan
+ - Financial Data, Japan, Stock Market, Equities
 
 #### Properties
 
@@ -37,6 +38,7 @@ The J-Quants API is a data distribution service that makes it easy to obtain cle
 ## Common Properties
 
 - [Website](https://jpx-jquants.com/)
+- [Documentation](https://jpx-jquants.com/)
 
 ## Maintainers
 
