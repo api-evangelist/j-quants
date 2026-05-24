@@ -43,6 +43,8 @@ common:
     url: https://jpx-jquants.com/
   - type: Documentation
     url: https://jpx-jquants.com/
+  - type: LLMsTxt
+    url: https://jpx-jquants.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
