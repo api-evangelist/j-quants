@@ -1,0 +1,378 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "J-Quants API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Refresh Token",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.jquants.com/v1/token/auth_user",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Obtain a refresh token from the user's email and password."
+    },
+    {
+      "info": {
+        "name": "ID Token",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.jquants.com/v1/token/auth_refresh",
+        "params": [
+          {
+            "name": "refreshtoken",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Exchange a refresh token for an ID token."
+    },
+    {
+      "info": {
+        "name": "Listed issue information",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/listed/info",
+        "params": [
+          {
+            "name": "code",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "date",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Listed issue information"
+    },
+    {
+      "info": {
+        "name": "Stock prices (OHLC)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/prices/daily_quotes",
+        "params": [
+          {
+            "name": "code",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "date",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "from",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "to",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Stock prices (OHLC)"
+    },
+    {
+      "info": {
+        "name": "Morning session stock prices (OHLC)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/prices/prices_am",
+        "params": [
+          {
+            "name": "code",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Morning session stock prices (OHLC)"
+    },
+    {
+      "info": {
+        "name": "Daily equity bars (v2)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/equities/bars/daily",
+        "params": [
+          {
+            "name": "code",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "date",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Daily equity bars (v2)"
+    },
+    {
+      "info": {
+        "name": "Trading by type of investors",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/markets/trades_spec",
+        "params": [
+          {
+            "name": "section",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "from",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "to",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Trading by type of investors"
+    },
+    {
+      "info": {
+        "name": "Weekly margin trading outstandings",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/markets/weekly_margin_interest",
+        "params": [
+          {
+            "name": "code",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "date",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Weekly margin trading outstandings"
+    },
+    {
+      "info": {
+        "name": "Short sale value and ratio by sector",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/markets/short_selling",
+        "params": [
+          {
+            "name": "sector33code",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "date",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Short sale value and ratio by sector"
+    },
+    {
+      "info": {
+        "name": "Outstanding short selling positions",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/markets/short_selling_positions"
+      },
+      "docs": "Outstanding short selling positions"
+    },
+    {
+      "info": {
+        "name": "Daily margin trading outstanding",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/markets/daily_margin_interest"
+      },
+      "docs": "Daily margin trading outstanding"
+    },
+    {
+      "info": {
+        "name": "Breakdown trading data",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/markets/breakdown"
+      },
+      "docs": "Breakdown trading data"
+    },
+    {
+      "info": {
+        "name": "Trading calendar",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/markets/trading_calendar"
+      },
+      "docs": "Trading calendar"
+    },
+    {
+      "info": {
+        "name": "TOPIX prices (OHLC)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/indices/topix",
+        "params": [
+          {
+            "name": "from",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "to",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "TOPIX prices (OHLC)"
+    },
+    {
+      "info": {
+        "name": "Financial statements",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/fins/statements",
+        "params": [
+          {
+            "name": "code",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "date",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Financial statements"
+    },
+    {
+      "info": {
+        "name": "Financial statement details (BS/PL/CF)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/fins/fs_details"
+      },
+      "docs": "Financial statement details (BS/PL/CF)"
+    },
+    {
+      "info": {
+        "name": "Cash dividend data",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/fins/dividend"
+      },
+      "docs": "Cash dividend data"
+    },
+    {
+      "info": {
+        "name": "Earnings announcement calendar",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/fins/announcement"
+      },
+      "docs": "Earnings announcement calendar"
+    },
+    {
+      "info": {
+        "name": "Index option prices (OHLC)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/option/index_option"
+      },
+      "docs": "Index option prices (OHLC)"
+    },
+    {
+      "info": {
+        "name": "Futures (OHLC)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/derivatives/futures"
+      },
+      "docs": "Futures (OHLC)"
+    },
+    {
+      "info": {
+        "name": "Options (OHLC)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.jquants.com/v1/derivatives/options"
+      },
+      "docs": "Options (OHLC)"
+    }
+  ],
+  "bundled": true
+}

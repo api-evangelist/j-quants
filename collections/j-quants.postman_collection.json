@@ -1,0 +1,1687 @@
+{
+  "item": [
+    {
+      "id": "f1224365-9024-496a-ad2b-ce5ae1fa970c",
+      "name": "Refresh Token",
+      "request": {
+        "name": "Refresh Token",
+        "description": {
+          "content": "Obtain a refresh token from the user's email and password.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "token",
+            "auth_user"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"mailaddress\": \"<email>\",\n  \"password\": \"<password>\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "8939e626-e27b-4cf2-afbb-df209bea6648",
+          "name": "Refresh token issued",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "token",
+                "auth_user"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mailaddress\": \"<email>\",\n  \"password\": \"<password>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "d88c7196-fb1b-40f5-a831-b66c9d0209e8",
+      "name": "ID Token",
+      "request": {
+        "name": "ID Token",
+        "description": {
+          "content": "Exchange a refresh token for an ID token.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "token",
+            "auth_refresh"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "refreshtoken",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "f885451d-c9a8-49ec-a0aa-d4501d246f5e",
+          "name": "ID token issued",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "token",
+                "auth_refresh"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "refreshtoken",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "ce2fd235-ff0a-45f9-b916-147fcefbd10e",
+      "name": "Listed issue information",
+      "request": {
+        "name": "Listed issue information",
+        "description": {},
+        "url": {
+          "path": [
+            "listed",
+            "info"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "code",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "date",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "50ec2449-4cd7-41b9-9e9b-9f382a758d41",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "listed",
+                "info"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "date",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "19390873-83e4-4c38-97d2-3c40fd0be3d4",
+      "name": "Stock prices (OHLC)",
+      "request": {
+        "name": "Stock prices (OHLC)",
+        "description": {},
+        "url": {
+          "path": [
+            "prices",
+            "daily_quotes"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "code",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "date",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "from",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "to",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "c42407dc-4a6e-45a3-82fe-9f7a67e37456",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "prices",
+                "daily_quotes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "date",
+                  "value": "<string>"
+                },
+                {
+                  "key": "from",
+                  "value": "<string>"
+                },
+                {
+                  "key": "to",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "5cb7904f-345a-4bd9-9c3f-20b96511f721",
+      "name": "Morning session stock prices (OHLC)",
+      "request": {
+        "name": "Morning session stock prices (OHLC)",
+        "description": {},
+        "url": {
+          "path": [
+            "prices",
+            "prices_am"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "code",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "ce308a9a-3b91-4ddf-afa1-d458f9e7d912",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "prices",
+                "prices_am"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "code",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "736fdb1f-9ce6-4af9-9a79-2f66ad34db9e",
+      "name": "Daily equity bars (v2)",
+      "request": {
+        "name": "Daily equity bars (v2)",
+        "description": {},
+        "url": {
+          "path": [
+            "equities",
+            "bars",
+            "daily"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "code",
+              "value": "<string>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "date",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "02d89801-ef9e-430b-8464-40bb1e36cc98",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "equities",
+                "bars",
+                "daily"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "date",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "754241ad-798a-498b-b10a-5e150bbf3ecb",
+      "name": "Trading by type of investors",
+      "request": {
+        "name": "Trading by type of investors",
+        "description": {},
+        "url": {
+          "path": [
+            "markets",
+            "trades_spec"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "section",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "from",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "to",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "2b8e3964-ee34-46b3-8107-e8085cbff53e",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "markets",
+                "trades_spec"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "section",
+                  "value": "<string>"
+                },
+                {
+                  "key": "from",
+                  "value": "<string>"
+                },
+                {
+                  "key": "to",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "9e7fc78e-627d-45a9-b2fe-26a946045e7a",
+      "name": "Weekly margin trading outstandings",
+      "request": {
+        "name": "Weekly margin trading outstandings",
+        "description": {},
+        "url": {
+          "path": [
+            "markets",
+            "weekly_margin_interest"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "code",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "date",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "d69474e2-e402-4824-8d17-b7d0bd04a5ee",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "markets",
+                "weekly_margin_interest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "date",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "395453cb-dc8b-493a-88dc-7b096200aee6",
+      "name": "Short sale value and ratio by sector",
+      "request": {
+        "name": "Short sale value and ratio by sector",
+        "description": {},
+        "url": {
+          "path": [
+            "markets",
+            "short_selling"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "sector33code",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "date",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "a97d211a-98c4-49d4-b66d-f67f36b3ecb2",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "markets",
+                "short_selling"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "sector33code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "date",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "68c0e806-83ba-4b0a-9e28-8823f135ed64",
+      "name": "Outstanding short selling positions",
+      "request": {
+        "name": "Outstanding short selling positions",
+        "description": {},
+        "url": {
+          "path": [
+            "markets",
+            "short_selling_positions"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "e14aaf14-3131-4166-ad3c-21bc666385f7",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "markets",
+                "short_selling_positions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "d15582ba-527a-47d5-bd6e-ddfce9dc96a5",
+      "name": "Daily margin trading outstanding",
+      "request": {
+        "name": "Daily margin trading outstanding",
+        "description": {},
+        "url": {
+          "path": [
+            "markets",
+            "daily_margin_interest"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "b81c695c-9290-4a84-80a6-3d64e962ac94",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "markets",
+                "daily_margin_interest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "f46eec73-3983-4f68-ac00-ca800cec2cc4",
+      "name": "Breakdown trading data",
+      "request": {
+        "name": "Breakdown trading data",
+        "description": {},
+        "url": {
+          "path": [
+            "markets",
+            "breakdown"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "f9789f77-33a9-48d6-b853-2c9b63e9a31e",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "markets",
+                "breakdown"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "7cb93baf-9383-49b9-ba97-0ccccf7556df",
+      "name": "Trading calendar",
+      "request": {
+        "name": "Trading calendar",
+        "description": {},
+        "url": {
+          "path": [
+            "markets",
+            "trading_calendar"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "7e64398c-1310-4d8e-abf5-324984e2a3d0",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "markets",
+                "trading_calendar"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "d4611910-c736-4d1e-9ccc-2a682397b6e3",
+      "name": "TOPIX prices (OHLC)",
+      "request": {
+        "name": "TOPIX prices (OHLC)",
+        "description": {},
+        "url": {
+          "path": [
+            "indices",
+            "topix"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "from",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "to",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "65910ffa-db7d-455c-b9ad-af2ab12b64a2",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "indices",
+                "topix"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "from",
+                  "value": "<string>"
+                },
+                {
+                  "key": "to",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "f75cbb01-843e-460e-a4e4-32412e1c1ddf",
+      "name": "Financial statements",
+      "request": {
+        "name": "Financial statements",
+        "description": {},
+        "url": {
+          "path": [
+            "fins",
+            "statements"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "code",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "date",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "d22ea4af-69f1-4614-abcf-bff62789cbfe",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "fins",
+                "statements"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "date",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "7001ab5c-f93a-4370-ab48-fc2c3dfb0ff1",
+      "name": "Financial statement details (BS/PL/CF)",
+      "request": {
+        "name": "Financial statement details (BS/PL/CF)",
+        "description": {},
+        "url": {
+          "path": [
+            "fins",
+            "fs_details"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "fc7f93dd-73b8-4951-9b34-b8dc44e9c2bc",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "fins",
+                "fs_details"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "8dc84471-22da-4238-8f40-2b7e105c61ec",
+      "name": "Cash dividend data",
+      "request": {
+        "name": "Cash dividend data",
+        "description": {},
+        "url": {
+          "path": [
+            "fins",
+            "dividend"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "ebc815f3-52b5-4fac-bd2b-504f7a9a9900",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "fins",
+                "dividend"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "5ace9c89-65eb-41a6-9613-34f749e2802a",
+      "name": "Earnings announcement calendar",
+      "request": {
+        "name": "Earnings announcement calendar",
+        "description": {},
+        "url": {
+          "path": [
+            "fins",
+            "announcement"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "80d7330f-7cf5-48f3-97a5-c549be828f26",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "fins",
+                "announcement"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "2d3da997-6e9b-4e54-9926-0bc4208c28d2",
+      "name": "Index option prices (OHLC)",
+      "request": {
+        "name": "Index option prices (OHLC)",
+        "description": {},
+        "url": {
+          "path": [
+            "option",
+            "index_option"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "751c6529-8579-457e-9f3a-b13ed63eb352",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "option",
+                "index_option"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "6401b71d-8a4f-4310-8a4f-a37ca1ea3705",
+      "name": "Futures (OHLC)",
+      "request": {
+        "name": "Futures (OHLC)",
+        "description": {},
+        "url": {
+          "path": [
+            "derivatives",
+            "futures"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "3bf03289-6dc2-4cac-a9a6-42bb77526f54",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "derivatives",
+                "futures"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "ba23a134-0e52-494d-995a-8e3c8dc7fca1",
+      "name": "Options (OHLC)",
+      "request": {
+        "name": "Options (OHLC)",
+        "description": {},
+        "url": {
+          "path": [
+            "derivatives",
+            "options"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "21ecf108-afc1-4180-bf05-7be23980c390",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "derivatives",
+                "options"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.jquants.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5e4c932d-7398-4763-860b-f98c402ba5a6",
+    "name": "J-Quants API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Japanese stock market data API by JPX. Provides stock prices, financial data,\ndividends, splits, indices, and derivatives information for Japanese equities.\n\n\nContact Support:\n Name: J-Quants",
+      "type": "text/plain"
+    }
+  }
+}
