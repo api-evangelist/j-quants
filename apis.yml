@@ -6,7 +6,7 @@ description: >-
   data such as stock prices and financials in historical format. The service
   democratizes access to raw financial data for investment analysis.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Financial Data
   - Investment
