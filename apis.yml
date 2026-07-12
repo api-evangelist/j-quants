@@ -37,6 +37,10 @@ apis:
       - type: Documentation
         url: https://jpx-jquants.com/
 common:
+  - type: DomainSecurity
+    url: security/j-quants-domain-security.yml
+  - type: Authentication
+    url: authentication/j-quants-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/J-Quants
   - type: Website
