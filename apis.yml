@@ -37,6 +37,8 @@ apis:
       - type: Documentation
         url: https://jpx-jquants.com/
 common:
+  - type: AgenticAccess
+    url: agentic-access/j-quants-agentic-access.yml
   - type: DomainSecurity
     url: security/j-quants-domain-security.yml
   - type: Authentication
