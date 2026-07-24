@@ -1,0 +1,127 @@
+openapi: 3.1.0
+info:
+  title: J-Quants Derivatives Markets API
+  description: 'Japanese stock market data API by JPX. Provides stock prices, financial data,
+
+    dividends, splits, indices, and derivatives information for Japanese equities.
+
+    '
+  version: '2.0'
+  contact:
+    name: J-Quants
+    url: https://jpx-jquants.com/
+servers:
+- url: https://api.jquants.com/v1
+  description: J-Quants v1 (legacy, scheduled to be discontinued)
+- url: https://api.jquants.com/v2
+  description: J-Quants v2
+security:
+- idToken: []
+tags:
+- name: Markets
+paths:
+  /markets/trades_spec:
+    get:
+      summary: Trading by type of investors
+      operationId: getTradesSpec
+      parameters:
+      - in: query
+        name: section
+        schema:
+          type: string
+      - in: query
+        name: from
+        schema:
+          type: string
+      - in: query
+        name: to
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Markets
+  /markets/weekly_margin_interest:
+    get:
+      summary: Weekly margin trading outstandings
+      operationId: getWeeklyMarginInterest
+      parameters:
+      - in: query
+        name: code
+        schema:
+          type: string
+      - in: query
+        name: date
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Markets
+  /markets/short_selling:
+    get:
+      summary: Short sale value and ratio by sector
+      operationId: getShortSelling
+      parameters:
+      - in: query
+        name: sector33code
+        schema:
+          type: string
+      - in: query
+        name: date
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Markets
+  /markets/short_selling_positions:
+    get:
+      summary: Outstanding short selling positions
+      operationId: getShortSellingPositions
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Markets
+  /markets/daily_margin_interest:
+    get:
+      summary: Daily margin trading outstanding
+      operationId: getDailyMarginInterest
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Markets
+  /markets/breakdown:
+    get:
+      summary: Breakdown trading data
+      operationId: getBreakdown
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Markets
+  /markets/trading_calendar:
+    get:
+      summary: Trading calendar
+      operationId: getTradingCalendar
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Markets
+components:
+  securitySchemes:
+    idToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Bearer ID token issued via /token/auth_refresh
+    apiKey:
+      type: apiKey
+      in: header
+      name: x-api-key

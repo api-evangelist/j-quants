@@ -1,0 +1,51 @@
+openapi: 3.1.0
+info:
+  title: J-Quants Derivatives API
+  description: 'Japanese stock market data API by JPX. Provides stock prices, financial data,
+
+    dividends, splits, indices, and derivatives information for Japanese equities.
+
+    '
+  version: '2.0'
+  contact:
+    name: J-Quants
+    url: https://jpx-jquants.com/
+servers:
+- url: https://api.jquants.com/v1
+  description: J-Quants v1 (legacy, scheduled to be discontinued)
+- url: https://api.jquants.com/v2
+  description: J-Quants v2
+security:
+- idToken: []
+tags:
+- name: Derivatives
+paths:
+  /derivatives/futures:
+    get:
+      summary: Futures (OHLC)
+      operationId: getFutures
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Derivatives
+  /derivatives/options:
+    get:
+      summary: Options (OHLC)
+      operationId: getOptions
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Derivatives
+components:
+  securitySchemes:
+    idToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Bearer ID token issued via /token/auth_refresh
+    apiKey:
+      type: apiKey
+      in: header
+      name: x-api-key

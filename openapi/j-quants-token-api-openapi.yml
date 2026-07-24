@@ -1,0 +1,74 @@
+openapi: 3.1.0
+info:
+  title: J-Quants Derivatives Token API
+  description: 'Japanese stock market data API by JPX. Provides stock prices, financial data,
+
+    dividends, splits, indices, and derivatives information for Japanese equities.
+
+    '
+  version: '2.0'
+  contact:
+    name: J-Quants
+    url: https://jpx-jquants.com/
+servers:
+- url: https://api.jquants.com/v1
+  description: J-Quants v1 (legacy, scheduled to be discontinued)
+- url: https://api.jquants.com/v2
+  description: J-Quants v2
+security:
+- idToken: []
+tags:
+- name: Token
+paths:
+  /token/auth_user:
+    post:
+      summary: Refresh Token
+      description: Obtain a refresh token from the user's email and password.
+      operationId: getRefreshToken
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                mailaddress:
+                  type: string
+                  format: email
+                password:
+                  type: string
+                  format: password
+      responses:
+        '200':
+          description: Refresh token issued
+      tags:
+      - Token
+  /token/auth_refresh:
+    post:
+      summary: ID Token
+      description: Exchange a refresh token for an ID token.
+      operationId: getIdToken
+      security: []
+      parameters:
+      - in: query
+        name: refreshtoken
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: ID token issued
+      tags:
+      - Token
+components:
+  securitySchemes:
+    idToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Bearer ID token issued via /token/auth_refresh
+    apiKey:
+      type: apiKey
+      in: header
+      name: x-api-key

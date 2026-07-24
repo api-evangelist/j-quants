@@ -1,0 +1,78 @@
+openapi: 3.1.0
+info:
+  title: J-Quants Derivatives Fins API
+  description: 'Japanese stock market data API by JPX. Provides stock prices, financial data,
+
+    dividends, splits, indices, and derivatives information for Japanese equities.
+
+    '
+  version: '2.0'
+  contact:
+    name: J-Quants
+    url: https://jpx-jquants.com/
+servers:
+- url: https://api.jquants.com/v1
+  description: J-Quants v1 (legacy, scheduled to be discontinued)
+- url: https://api.jquants.com/v2
+  description: J-Quants v2
+security:
+- idToken: []
+tags:
+- name: Fins
+paths:
+  /fins/statements:
+    get:
+      summary: Financial statements
+      operationId: getFinStatements
+      parameters:
+      - in: query
+        name: code
+        schema:
+          type: string
+      - in: query
+        name: date
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Fins
+  /fins/fs_details:
+    get:
+      summary: Financial statement details (BS/PL/CF)
+      operationId: getFsDetails
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Fins
+  /fins/dividend:
+    get:
+      summary: Cash dividend data
+      operationId: getDividend
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Fins
+  /fins/announcement:
+    get:
+      summary: Earnings announcement calendar
+      operationId: getAnnouncement
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Fins
+components:
+  securitySchemes:
+    idToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Bearer ID token issued via /token/auth_refresh
+    apiKey:
+      type: apiKey
+      in: header
+      name: x-api-key
