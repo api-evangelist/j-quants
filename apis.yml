@@ -6,7 +6,20 @@ description: >-
   data such as stock prices and financials in historical format. The service
   democratizes access to raw financial data for investment analysis.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/j-quants.png
 tags:
   - Financial Data
   - Investment
@@ -18,24 +31,112 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/j-quants/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: j-quants:j-quants-api
-    name: J-Quants API
-    description: >-
-      The J-Quants API (V2) is a data distribution service operated by Japan
-      Exchange Group (JPX) that makes it easy to obtain cleansed financial
-      data such as Japanese stock prices and financials in historical format,
-      enabling investment analysis. Authentication is via API key passed in
-      the x-api-key header.
-    humanURL: https://jpx-jquants.com/
-    baseURL: https://api.jquants.com/
-    tags:
-      - Financial Data
-      - Japan
-      - Stock Market
-      - Equities
-    properties:
-      - type: Documentation
-        url: https://jpx-jquants.com/
+- aid: j-quants:j-quants-api
+  name: J-Quants API
+  description: >-
+    The J-Quants API (V2) is a data distribution service operated by Japan Exchange Group (JPX) that makes
+    it easy to obtain cleansed financial data such as Japanese stock prices and financials in historical
+    format, enabling investment analysis. Authentication is via API key passed in the x-api-key header.
+  humanURL: https://jpx-jquants.com/
+  baseURL: https://api.jquants.com/
+  tags:
+  - Financial Data
+  - Japan
+  - Stock Market
+  - Equities
+  properties:
+  - type: Documentation
+    url: https://jpx-jquants.com/
+- aid: j-quants:j-quants-derivatives-api
+  name: J-Quants Derivatives API
+  description: The Derivatives API from J-Quants — 2 operation(s) for derivatives.
+  humanURL: https://jpx-jquants.com/
+  baseURL: https://api.jquants.com/
+  tags:
+  - Derivatives
+  properties:
+  - type: OpenAPI
+    url: openapi/j-quants-derivatives-api-openapi.yml
+- aid: j-quants:j-quants-equities-api
+  name: J-Quants Equities API
+  description: The Equities API from J-Quants — 1 operation(s) for equities.
+  humanURL: https://jpx-jquants.com/
+  baseURL: https://api.jquants.com/
+  tags:
+  - Equities
+  properties:
+  - type: OpenAPI
+    url: openapi/j-quants-equities-api-openapi.yml
+- aid: j-quants:j-quants-fins-api
+  name: J-Quants Fins API
+  description: The Fins API from J-Quants — 4 operation(s) for fins.
+  humanURL: https://jpx-jquants.com/
+  baseURL: https://api.jquants.com/
+  tags:
+  - Fins
+  properties:
+  - type: OpenAPI
+    url: openapi/j-quants-fins-api-openapi.yml
+- aid: j-quants:j-quants-indices-api
+  name: J-Quants Indices API
+  description: The Indices API from J-Quants — 1 operation(s) for indices.
+  humanURL: https://jpx-jquants.com/
+  baseURL: https://api.jquants.com/
+  tags:
+  - Indices
+  properties:
+  - type: OpenAPI
+    url: openapi/j-quants-indices-api-openapi.yml
+- aid: j-quants:j-quants-listed-api
+  name: J-Quants Listed API
+  description: The Listed API from J-Quants — 1 operation(s) for listed.
+  humanURL: https://jpx-jquants.com/
+  baseURL: https://api.jquants.com/
+  tags:
+  - Listed
+  properties:
+  - type: OpenAPI
+    url: openapi/j-quants-listed-api-openapi.yml
+- aid: j-quants:j-quants-markets-api
+  name: J-Quants Markets API
+  description: The Markets API from J-Quants — 7 operation(s) for markets.
+  humanURL: https://jpx-jquants.com/
+  baseURL: https://api.jquants.com/
+  tags:
+  - Markets
+  properties:
+  - type: OpenAPI
+    url: openapi/j-quants-markets-api-openapi.yml
+- aid: j-quants:j-quants-option-api
+  name: J-Quants Option API
+  description: The Option API from J-Quants — 1 operation(s) for option.
+  humanURL: https://jpx-jquants.com/
+  baseURL: https://api.jquants.com/
+  tags:
+  - Option
+  properties:
+  - type: OpenAPI
+    url: openapi/j-quants-option-api-openapi.yml
+- aid: j-quants:j-quants-prices-api
+  name: J-Quants Prices API
+  description: The Prices API from J-Quants — 2 operation(s) for prices.
+  humanURL: https://jpx-jquants.com/
+  baseURL: https://api.jquants.com/
+  tags:
+  - Prices
+  properties:
+  - type: OpenAPI
+    url: openapi/j-quants-prices-api-openapi.yml
+- aid: j-quants:j-quants-token-api
+  name: J-Quants Token API
+  description: The Token API from J-Quants — 2 operation(s) for token.
+  humanURL: https://jpx-jquants.com/
+  baseURL: https://api.jquants.com/
+  tags:
+  - Token
+  properties:
+  - type: OpenAPI
+    url: openapi/j-quants-token-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/j-quants-agentic-access.yml
