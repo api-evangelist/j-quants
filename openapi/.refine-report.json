@@ -1,0 +1,30 @@
+{
+  "provider": "j-quants",
+  "sources": [
+    "j-quants-derivatives-api-openapi.yml",
+    "j-quants-equities-api-openapi.yml",
+    "j-quants-fins-api-openapi.yml",
+    "j-quants-indices-api-openapi.yml",
+    "j-quants-listed-api-openapi.yml",
+    "j-quants-markets-api-openapi.yml",
+    "j-quants-option-api-openapi.yml",
+    "j-quants-prices-api-openapi.yml",
+    "j-quants-token-api-openapi.yml"
+  ],
+  "outputs": [
+    "j-quants-derivatives-api-openapi.yml",
+    "j-quants-equities-api-openapi.yml",
+    "j-quants-fins-api-openapi.yml",
+    "j-quants-indices-api-openapi.yml",
+    "j-quants-listed-api-openapi.yml",
+    "j-quants-markets-api-openapi.yml",
+    "j-quants-option-api-openapi.yml",
+    "j-quants-prices-api-openapi.yml",
+    "j-quants-token-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
