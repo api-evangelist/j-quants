@@ -1,0 +1,49 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "J-Quants Derivatives Equities API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Equities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Daily equity bars (v2)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/equities/bars/daily",
+            "params": [
+              {
+                "name": "code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Daily equity bars (v2)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

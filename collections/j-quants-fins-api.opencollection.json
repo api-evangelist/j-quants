@@ -1,0 +1,82 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "J-Quants Derivatives Fins API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Fins",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Financial statements",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/fins/statements",
+            "params": [
+              {
+                "name": "code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Financial statements"
+        },
+        {
+          "info": {
+            "name": "Financial statement details (BS/PL/CF)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/fins/fs_details"
+          },
+          "docs": "Financial statement details (BS/PL/CF)"
+        },
+        {
+          "info": {
+            "name": "Cash dividend data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/fins/dividend"
+          },
+          "docs": "Cash dividend data"
+        },
+        {
+          "info": {
+            "name": "Earnings announcement calendar",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/fins/announcement"
+          },
+          "docs": "Earnings announcement calendar"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

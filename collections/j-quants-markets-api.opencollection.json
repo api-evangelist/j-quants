@@ -1,0 +1,144 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "J-Quants Derivatives Markets API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Markets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Trading by type of investors",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/markets/trades_spec",
+            "params": [
+              {
+                "name": "section",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "from",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "to",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Trading by type of investors"
+        },
+        {
+          "info": {
+            "name": "Weekly margin trading outstandings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/markets/weekly_margin_interest",
+            "params": [
+              {
+                "name": "code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Weekly margin trading outstandings"
+        },
+        {
+          "info": {
+            "name": "Short sale value and ratio by sector",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/markets/short_selling",
+            "params": [
+              {
+                "name": "sector33code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Short sale value and ratio by sector"
+        },
+        {
+          "info": {
+            "name": "Outstanding short selling positions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/markets/short_selling_positions"
+          },
+          "docs": "Outstanding short selling positions"
+        },
+        {
+          "info": {
+            "name": "Daily margin trading outstanding",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/markets/daily_margin_interest"
+          },
+          "docs": "Daily margin trading outstanding"
+        },
+        {
+          "info": {
+            "name": "Breakdown trading data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/markets/breakdown"
+          },
+          "docs": "Breakdown trading data"
+        },
+        {
+          "info": {
+            "name": "Trading calendar",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/markets/trading_calendar"
+          },
+          "docs": "Trading calendar"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

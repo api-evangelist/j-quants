@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "J-Quants Derivatives Option API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Option",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Index option prices (OHLC)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/option/index_option"
+          },
+          "docs": "Index option prices (OHLC)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,77 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "J-Quants Derivatives Prices API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Prices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Stock prices (OHLC)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/prices/daily_quotes",
+            "params": [
+              {
+                "name": "code",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "from",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "to",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Stock prices (OHLC)"
+        },
+        {
+          "info": {
+            "name": "Morning session stock prices (OHLC)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/prices/prices_am",
+            "params": [
+              {
+                "name": "code",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Morning session stock prices (OHLC)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

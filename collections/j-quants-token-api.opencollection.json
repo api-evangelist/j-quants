@@ -1,0 +1,59 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "J-Quants Derivatives Token API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Token",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Refresh Token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.jquants.com/v1/token/auth_user",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Obtain a refresh token from the user's email and password."
+        },
+        {
+          "info": {
+            "name": "ID Token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.jquants.com/v1/token/auth_refresh",
+            "params": [
+              {
+                "name": "refreshtoken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Exchange a refresh token for an ID token."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

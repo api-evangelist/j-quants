@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "J-Quants Derivatives API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Derivatives",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Futures (OHLC)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/derivatives/futures"
+          },
+          "docs": "Futures (OHLC)"
+        },
+        {
+          "info": {
+            "name": "Options (OHLC)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.jquants.com/v1/derivatives/options"
+          },
+          "docs": "Options (OHLC)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
