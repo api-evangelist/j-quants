@@ -55,6 +55,11 @@ apis:
   - Financial Data
   - Japan
   - Stock Market
+  - Stocks
+  tags_raw:
+  - Financial Data
+  - Japan
+  - Stock Market
   - Equities
   properties:
   - type: Documentation
@@ -75,6 +80,8 @@ apis:
   humanURL: https://jpx-jquants.com/
   baseURL: https://api.jquants.com/
   tags:
+  - Stocks
+  tags_raw:
   - Equities
   properties:
   - type: OpenAPI
@@ -145,6 +152,8 @@ apis:
   humanURL: https://jpx-jquants.com/
   baseURL: https://api.jquants.com/
   tags:
+  - Tokens
+  tags_raw:
   - Token
   properties:
   - type: OpenAPI
