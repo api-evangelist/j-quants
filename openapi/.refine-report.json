@@ -1,15 +1,7 @@
 {
   "provider": "j-quants",
   "sources": [
-    "j-quants-derivatives-api-openapi.yml",
-    "j-quants-equities-api-openapi.yml",
-    "j-quants-fins-api-openapi.yml",
-    "j-quants-indices-api-openapi.yml",
-    "j-quants-listed-api-openapi.yml",
-    "j-quants-markets-api-openapi.yml",
-    "j-quants-option-api-openapi.yml",
-    "j-quants-prices-api-openapi.yml",
-    "j-quants-token-api-openapi.yml"
+    "_original/j-quants-openapi.yml"
   ],
   "outputs": [
     "j-quants-derivatives-api-openapi.yml",
@@ -25,6 +17,50 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "j-quants-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "j-quants-openapi.yml: tagged paths POST /token/auth_user -> Token",
+    "j-quants-openapi.yml: tagged paths POST /token/auth_refresh -> Token",
+    "j-quants-openapi.yml: tagged paths GET /listed/info -> Listed",
+    "j-quants-openapi.yml: tagged paths GET /prices/daily_quotes -> Prices",
+    "j-quants-openapi.yml: tagged paths GET /prices/prices_am -> Prices",
+    "j-quants-openapi.yml: tagged paths GET /equities/bars/daily -> Equities",
+    "j-quants-openapi.yml: tagged paths GET /markets/trades_spec -> Markets",
+    "j-quants-openapi.yml: tagged paths GET /markets/weekly_margin_interest -> Markets",
+    "j-quants-openapi.yml: tagged paths GET /markets/short_selling -> Markets",
+    "j-quants-openapi.yml: tagged paths GET /markets/short_selling_positions -> Markets",
+    "j-quants-openapi.yml: tagged paths GET /markets/daily_margin_interest -> Markets",
+    "j-quants-openapi.yml: tagged paths GET /markets/breakdown -> Markets",
+    "j-quants-openapi.yml: tagged paths GET /markets/trading_calendar -> Markets",
+    "j-quants-openapi.yml: tagged paths GET /indices/topix -> Indices",
+    "j-quants-openapi.yml: tagged paths GET /fins/statements -> Fins",
+    "j-quants-openapi.yml: tagged paths GET /fins/fs_details -> Fins",
+    "j-quants-openapi.yml: tagged paths GET /fins/dividend -> Fins",
+    "j-quants-openapi.yml: tagged paths GET /fins/announcement -> Fins",
+    "j-quants-openapi.yml: tagged paths GET /option/index_option -> Option",
+    "j-quants-openapi.yml: tagged paths GET /derivatives/futures -> Derivatives",
+    "j-quants-openapi.yml: tagged paths GET /derivatives/options -> Derivatives",
+    "j-quants-openapi.yml: declared missing tag: Derivatives",
+    "j-quants-openapi.yml: declared missing tag: Equities",
+    "j-quants-openapi.yml: declared missing tag: Fins",
+    "j-quants-openapi.yml: declared missing tag: Indices",
+    "j-quants-openapi.yml: declared missing tag: Listed",
+    "j-quants-openapi.yml: declared missing tag: Markets",
+    "j-quants-openapi.yml: declared missing tag: Option",
+    "j-quants-openapi.yml: declared missing tag: Prices",
+    "j-quants-openapi.yml: declared missing tag: Token",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "j-quants-derivatives-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "j-quants-equities-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "j-quants-fins-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "j-quants-indices-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "j-quants-listed-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "j-quants-markets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "j-quants-option-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "j-quants-prices-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "j-quants-token-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
