@@ -159,6 +159,12 @@ apis:
   - type: OpenAPI
     url: openapi/j-quants-token-api-openapi.yml
 common:
+  - type: Plans
+    url: plans/j-quants-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/j-quants-rate-limits.yml
+  - type: FinOps
+    url: finops/j-quants-finops.yml
   - type: AgenticAccess
     url: agentic-access/j-quants-agentic-access.yml
   - type: DomainSecurity
