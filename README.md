@@ -1,4 +1,4 @@
-# J-Quants (j-quants)
+# J-Quants
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,54 +66,132 @@
 
 J-Quants is a financial data API service operated by Japan Exchange Group (JPX) that makes it easy for retail investors to obtain cleansed financial data such as stock prices and financials in historical format. The service democratizes access to raw financial data for investment analysis.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/j-quants/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/j-quants/refs/heads/main/apis.yml)
+**Areas:** Financial Data · Investment · Japan · Stock Market
 
-## Scope
+## J-Quants on APIs.io
 
-- **Type:** Index
+Everything profiled for J-Quants is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/j-quants/](https://apis.io/providers/j-quants/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (10)
 
-- Financial Data
-- Investment
-- Japan
-- Stock Market
+- [J-Quants API](https://apis.io/apis/j-quants/j-quants-api/) — The J-Quants API (V2) is a data distribution service operated by Japan Exchange Group (JPX) that makes it easy to obtain cleansed financial data such as…
+- [J-Quants Derivatives API](https://apis.io/apis/j-quants/j-quants-derivatives-api/) — The Derivatives API from J-Quants — 2 operation(s) for derivatives.
+- [J-Quants Equities API](https://apis.io/apis/j-quants/j-quants-equities-api/) — The Equities API from J-Quants — 1 operation(s) for equities.
+- [J-Quants Fins API](https://apis.io/apis/j-quants/j-quants-fins-api/) — The Fins API from J-Quants — 4 operation(s) for fins.
+- [J-Quants Indices API](https://apis.io/apis/j-quants/j-quants-indices-api/) — The Indices API from J-Quants — 1 operation(s) for indices.
+- [J-Quants Listed API](https://apis.io/apis/j-quants/j-quants-listed-api/) — The Listed API from J-Quants — 1 operation(s) for listed.
+- [J-Quants Markets API](https://apis.io/apis/j-quants/j-quants-markets-api/) — The Markets API from J-Quants — 7 operation(s) for markets.
+- [J-Quants Option API](https://apis.io/apis/j-quants/j-quants-option-api/) — The Option API from J-Quants — 1 operation(s) for option.
+- [J-Quants Prices API](https://apis.io/apis/j-quants/j-quants-prices-api/) — The Prices API from J-Quants — 2 operation(s) for prices.
+- [J-Quants Token API](https://apis.io/apis/j-quants/j-quants-token-api/) — The Token API from J-Quants — 2 operation(s) for token.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-02-12
-- **Modified:** 2026-04-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### J-Quants API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The J-Quants API (V2) is a data distribution service operated by Japan Exchange Group (JPX) that makes it easy to obtain cleansed financial data such as Japanese stock prices and financials in historical format, enabling investment analysis. Authentication is via API key passed in the x-api-key header.
+- [J Quants Agentic Access](https://apis.io/agentic-access/j-quants/j-quants-agentic-access/)
 
-- **Human URL:** [https://jpx-jquants.com/](https://jpx-jquants.com/)
-- **Base URL:** `https://api.jquants.com/`
+#### Collections (10)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Financial Data
-- Japan
-- Stock Market
-- Equities
+- [J-Quants API](https://apis.io/collections/j-quants/open-j-quants/)
+- [J-Quants Derivatives API](https://apis.io/collections/j-quants/open-j-quants-derivatives-api/)
+- [J-Quants Derivatives Equities API](https://apis.io/collections/j-quants/open-j-quants-equities-api/)
+- [J-Quants Derivatives Fins API](https://apis.io/collections/j-quants/open-j-quants-fins-api/)
+- [J-Quants Derivatives Indices API](https://apis.io/collections/j-quants/open-j-quants-indices-api/)
+- [J-Quants Derivatives Listed API](https://apis.io/collections/j-quants/open-j-quants-listed-api/)
+- [J-Quants Derivatives Markets API](https://apis.io/collections/j-quants/open-j-quants-markets-api/)
+- [J-Quants Derivatives Option API](https://apis.io/collections/j-quants/open-j-quants-option-api/)
+- [J-Quants Derivatives Prices API](https://apis.io/collections/j-quants/open-j-quants-prices-api/)
+- [J-Quants Derivatives Token API](https://apis.io/collections/j-quants/open-j-quants-token-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://jpx-jquants.com/)
-- [Postman Collection](collections/j-quants.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/j-quants.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [J Quants Authentication](https://apis.io/security/j-quants/j-quants-authentication/)
+- [J Quants Domain Security](https://apis.io/security/j-quants/j-quants-domain-security/)
 
-- [GitHub Organization](https://github.com/J-Quants)
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [J Quants Plans Pricing](https://apis.io/plans/j-quants/j-quants-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [J Quants Rate Limits](https://apis.io/rate-limits/j-quants/j-quants-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [J Quants Finops](https://apis.io/finops/j-quants/j-quants-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://jpx-jquants.com/)
 - [Documentation](https://jpx-jquants.com/)
-- [L L Ms Txt](https://jpx-jquants.com/llms.txt)
+- [GitHub](https://github.com/J-Quants)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 23.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 45.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 7.9 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/j-quants/](https://apis.io/providers/j-quants/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for J-Quants: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/j-quants/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
